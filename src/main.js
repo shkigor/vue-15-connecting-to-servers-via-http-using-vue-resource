@@ -5,7 +5,7 @@ import App from './App.vue'
 Vue.use(VueResource);
 
 // Vue.$http we use only in Vue instances. In global scope we don't use $
-Vue.http.options.root = 'https://vuejs-http-23956.firebaseio.com/data.json';
+Vue.http.options.root = 'https://vuejs-http-23956.firebaseio.com/';
 // Add another global options for each request
 //Vue.http.options.headers =
 
