@@ -9,6 +9,14 @@ Vue.http.options.root = 'https://vuejs-http-23956.firebaseio.com/data.json';
 // Add another global options for each request
 //Vue.http.options.headers =
 
+Vue.http.interceptors.push((request, next) => {
+  console.log(request);
+  if (request.method == 'POST') {
+    request.method = 'PUT';
+  }
+  next();
+});
+
 new Vue({
   el: '#app',
   render: h => h(App)
